@@ -5,7 +5,7 @@ permissions:
 
 jobs:
   build_and_test:
-    runs-on: [hyperenv-demo, hyperenv-config:instance=m7a.xlarge]
+    runs-on: [hyperenv-demo, hyperenv-config:instance=m7i.xlarge]
     steps:
     - uses: actions/checkout@v4
       with:
@@ -40,4 +40,3 @@ jobs:
        sudo .ci/start-se-openvpn.sh
        sudo .ci/run-openvpn-tests.sh
 
-       
