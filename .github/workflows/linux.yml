@@ -43,3 +43,4 @@ jobs:
        sudo apt-get -y install autoconf libtool liblzo2-dev libpam-dev fping unzip libcap-ng-dev # To build OpenVPN
        sudo .ci/start-se-openvpn.sh
        sudo .ci/run-openvpn-tests.sh
+       sudo lscpu
