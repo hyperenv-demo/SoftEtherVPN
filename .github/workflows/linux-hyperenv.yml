@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 10
       matrix:
-        itertion: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        run: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     steps:
     - uses: actions/checkout@v4
       with:
@@ -34,7 +34,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-artifact@v4
       with:
-        name: deb-packages-${{ matrix.iteration }}
+        name: ${{ matrix.run }}
         path: build/*.deb
 
     - name: Test
