@@ -5,7 +5,7 @@ permissions:
 
 jobs:
   build_and_test:
-    runs-on: [hyperenv-demo, hyperenv-config:instance=m7i.large]
+    runs-on: [hyperenv-demo, hyperenv-config:instance=m7i.xlarge]
     strategy:
       max-parallel: 10
       matrix:
